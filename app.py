@@ -1,3 +1,4 @@
+GITHUB_PAGES_URL = 'https://github.com/rishitha-cheemarla/Voting-Platform'
 from flask import Flask, render_template, request, redirect, url_for, flash
 import sqlite3
 
@@ -80,7 +81,7 @@ def index():
         conn.commit()
         conn.close()
 
-    return render_template('index.html')
+    return render_template('index.html', GITHUB_PAGES_URL = GITHUB_PAGES_URL)
 
 # Display the "Create Poll" page
 @app.route('/create_poll', methods=['GET'])
